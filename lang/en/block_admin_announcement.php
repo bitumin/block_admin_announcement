@@ -25,7 +25,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Admin announcement block';
+$string['pluginname'] = 'Admin announcement';
 $string['admin_announcement'] = 'Admin announcement';
 $string['admin_announcement:addinstance'] = 'Add a new admin announcement block';
 $string['admin_announcement:myaddinstance'] = 'Add a new admin announcement block to Dashboard';
@@ -35,3 +35,8 @@ $string['settingtext_label'] = 'Admin announcement text';
 $string['settingtext_description'] = 'Text of the admin announcement';
 $string['settingtext_default'] = 'Hello world!';
 $string['disabledtext'] = 'There is no admin announcement this time!';
+$string['seechangelog'] = 'Go to changelog...';
+$string['changelogview_title'] = 'Announcements changelog';
+$string['changelogview_newvalue'] = 'New value';
+$string['changelogview_oldvalue'] = 'Previous value';
+$string['changelogview_timemodified'] = 'Modification date';

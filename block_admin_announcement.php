@@ -41,18 +41,25 @@ class block_admin_announcement extends block_base {
 
     /**
      * This should be always implemented by this child class.
+     * @throws \moodle_exception
      * @throws dml_exception
      * @throws coding_exception
      */
     public function get_content() {
         $this->content = new stdClass;
+
+        // Block main content
         $enabled = (bool) get_config('block_admin_announcement', 'enabled');
         if ($enabled) {
             $this->content->text = get_config('block_admin_announcement', 'text');
         } else {
             $this->content->text = get_string('disabledtext', 'block_admin_announcement');
         }
-        $this->content->footer = '';
+
+        // Block footer
+        $changelogurl = new moodle_url('/blocks/admin_announcement/changelog.php');
+        $linkstr = get_string('seechangelog', 'block_admin_announcement');
+        $this->content->footer = html_writer::link($changelogurl, $linkstr);
 
         return $this->content;
     }
